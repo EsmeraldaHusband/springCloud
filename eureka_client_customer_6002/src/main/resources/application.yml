@@ -1,0 +1,11 @@
+server:
+  port: 6002
+spring:
+  application:
+    name: eureka_client_customer_6002
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      # 集群注册中心
+      defaultZone: http://registry01.com:7001/eureka/,http://registry02.com:7002/eureka/

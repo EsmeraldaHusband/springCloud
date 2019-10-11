@@ -1,0 +1,25 @@
+server:
+  port: 6003
+spring:
+  application:
+    name: spring-Cloud-Zull
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://registry01.com:7001/eureka/
+zuul:
+  # 前缀，可以用来做版本控制
+  prefix: /v1
+  # 禁用默认路由，执行配置的路由
+  ignored-services: "*"
+  routes:
+    # 配置6001接口微服务
+    customer:
+      serviceId: eureka_client_customer_6001
+      path: /api-customer/**
+   # 配置集群微服务
+    provider:
+      serviceId: eureka-client-provider
+      path: /api-provider/**
