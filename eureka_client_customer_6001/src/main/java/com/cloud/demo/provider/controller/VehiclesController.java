@@ -1,4 +1,4 @@
-package com.cloud.demo.controller;
+package com.cloud.demo.provider.controller;
 
 import io.swagger.annotations.*;
 import org.slf4j.Logger;

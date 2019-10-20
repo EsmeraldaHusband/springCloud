@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.drool.engine.mapper.ParamInfoMapper" >
+    <insert id="insertSysEmployee"  parameterType="com.cloud.demo.provider.entity.SysEmployee" useGeneratedKeys="true" keyProperty="id" >
+        <selectKey resultType="java.lang.Integer"  order="AFTER" keyProperty="noticeId" >
+          SELECT LAST_INSERT_ID() AS id
+       </selectKey>
+        insert into sys_employee (employee_id, employee_name, login_code,
+        sex, email, cert_num,
+        status, service_number, creator, creator_id,
+        create_time, updator, update_time,
+        password)
+        values (#{employeeId,jdbcType=INTEGER}, #{employeeName,jdbcType=VARCHAR}, #{loginCode,jdbcType=VARCHAR},
+        #{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{certNum,jdbcType=VARCHAR},
+        #{status,jdbcType=VARCHAR}, #{serviceNumber,jdbcType=VARCHAR}, #{creator,jdbcType=VARCHAR}, #{creatorId,jdbcType=INTEGER},
+        #{createTime,jdbcType=TIMESTAMP}, #{updator,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP},
+        #{password,jdbcType=VARCHAR})
+    </insert>
+</mapper>

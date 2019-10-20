@@ -1,14 +1,18 @@
-package com.cloud.demo.controller;
+package com.cloud.demo.provider.controller;
 
+import com.cloud.demo.provider.service.GetAuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
 import java.util.Map;
 
 @RestController
 public class ConsumeController {
+    @Resource
+    private GetAuthorService getAuthorService ;
 
     @Autowired
     private RestTemplate restTemplate ;
@@ -20,5 +24,11 @@ public class ConsumeController {
     public Map<String,String> showInfo (){
         return restTemplate.getForObject("http://"+server_name+":8001/getInfo",Map.class) ;
     }
+
+    @RequestMapping(value = "/getAuthorInfo")
+    public String getAuthorInfo () {
+        return getAuthorService.getAuthorInfo("测试");
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package com.cloud.demo.service;
+package com.cloud.demo.provider.service;
 
 import org.springframework.stereotype.Component;
 

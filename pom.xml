@@ -15,7 +15,7 @@
         <module>eureka_client_provider_8002</module>
         <module>eureka_client_customer_6001</module>
         <module>eureka_client_customer_6002</module>
-        <module>springCloudZuul</module>
+        <module>spring_cloud_zuul</module>
     </modules>
 
     <!-- 依赖版本管理 -->
@@ -65,4 +65,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

@@ -1,4 +1,4 @@
-package com.cloud.demo.config;
+package com.cloud.demo.provider.config;
 
 import feign.Retryer;
 import org.springframework.beans.factory.annotation.Configurable;

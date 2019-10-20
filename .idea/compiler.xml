@@ -11,20 +11,10 @@
         <module name="eureka_client_provider_8001" />
         <module name="eureka_client_provider_8002" />
         <module name="eureka_server_7001" />
-        <module name="eurekaclient" />
-        <module name="springCloudZuul" />
-      </profile>
-      <profile name="Annotation profile for spring_cloud_zuul" enabled="true">
-        <sourceOutputDir name="../springCloudZuul/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../springCloudZuul/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="spring_cloud_zuul" />
-      </profile>
-      <profile name="Annotation profile for springCloud" enabled="true">
-        <sourceOutputDir name="../eureka_server_7001/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../eureka_server_7001/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
         <module name="eureka_server_7002" />
+        <module name="eurekaclient" />
+        <module name="spring_cloud_zuul" />
+        <module name="springCloudZuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

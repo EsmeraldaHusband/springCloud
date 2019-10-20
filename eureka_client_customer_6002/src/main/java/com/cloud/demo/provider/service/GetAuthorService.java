@@ -1,4 +1,4 @@
-package com.cloud.demo.service;
+package com.cloud.demo.provider.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
